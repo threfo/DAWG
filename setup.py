@@ -4,7 +4,7 @@ from setuptools import setup, Extension
 
 setup(
     name="DAWG",
-    version="0.8.0",
+    version="0.8.1",
     description="Fast and memory efficient DAWG (DAFSA) for Python",
     long_description=open('README.rst').read() + '\n\n' + open('CHANGES.rst').read(),
     author='Mikhail Korobov',
@@ -34,6 +34,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: Implementation :: CPython',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Scientific/Engineering :: Information Analysis',

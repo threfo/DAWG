@@ -559,6 +559,7 @@ cdef class BytesDAWG(CompletionDAWG):
         cdef b64_decode.decoder b64_decoder
         cdef char[MAX_VALUE_SIZE] b64_decoder_storage
         cdef vector[string] results
+        cdef string key
 
         self._completer.Start(index)
 
@@ -569,7 +570,8 @@ cdef class BytesDAWG(CompletionDAWG):
                 self._completer.length(),
                 b64_decoder_storage
             )
-            results.push_back(string(b64_decoder_storage, key_len))
+            key = string(b64_decoder_storage[:key_len])
+            results.push_back(key)
 
         return results
 
